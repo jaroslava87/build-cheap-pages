@@ -1,0 +1,77 @@
+@import 'null.scss';
+@import 'variables.scss';
+@import 'mixins.scss';
+@import 'fonts.scss'; 
+
+.about {
+    justify-content: space-between;
+    @media (max-width: $breackPoint_sm) {
+        flex-direction: column;
+    }
+    &__content {
+        width: 58%;
+        @media (max-width: $breackPoint_sm) {
+            width: 100%;
+        }
+        h2 {
+            margin-bottom: $margin15;
+            padding-left: $margin15; 
+        }
+        &-descr1 {
+            margin-bottom: $margin15;
+            @include font (600, 29px, 145%);
+            color: $blue;
+            @media (max-width: $breackPoint_md) {
+                font-size: 23px;
+            }
+            @media (max-width: $breackPoint_sm) {
+                @include font (600, 19px, 125%);
+                text-align: center;
+            }
+        }
+        &-descr2 {
+            margin-bottom: $margin15;
+            @include font (400, 21px, 145%);
+            color: $black;
+            @media (max-width: $breackPoint_md) {
+                font-size: 15px;
+            }
+            @media (max-width: $breackPoint_sm) {
+                @include font (400, 13px, 125%);
+                text-align: center;
+            }
+        }
+        &-descr3 {
+            margin-bottom: $margin15;
+            @include font (400, 16px, 145%);
+            color: $black;
+            @media (max-width: $breackPoint_md) {
+                font-size: 11px;
+            }
+            @media (max-width: $breackPoint_sm) {
+                @include font (400, 10px, 125%);
+                text-align: center;
+            }
+        }
+        &-logo {
+            grid-template-columns: repeat(4, 1fr);
+            padding: 0 $margin30;
+            @media (max-width: $breackPoint_md) {
+                grid-template-columns: repeat(2, 1fr);
+                gap: $margin15;
+                justify-items: center;
+            }
+            @media (max-width: $breackPoint_sm) {
+                padding: 0;
+            }
+        }
+
+    }
+    &__img {
+        width: 40%;
+        @media (max-width: $breackPoint_sm) {
+            width: 100%;
+        }
+        
+    }
+}

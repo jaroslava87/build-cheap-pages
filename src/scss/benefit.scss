@@ -1,0 +1,100 @@
+@import 'null.scss';
+@import 'variables.scss';
+@import 'mixins.scss';
+@import 'fonts.scss';
+
+.benefit {
+    &__title {
+        padding: 0 0 $margin15 $margin15 ;
+    }
+    &__content {
+        justify-content: space-between;
+        margin-bottom: $margin15;
+        gap: $margin15;
+        @media (max-width: $breackPoint_sm) {
+            flex-direction: column;
+        }
+        &-cart {
+            padding: $margin15 0 $margin15 $margin60;
+            width: 23.5%;
+            @media (max-width: $breackPoint_sm) {
+                width: 100%;
+            }
+            h3 {
+                margin-bottom: 5px;
+                @include font (600, 19px, 145%);
+                color: $blue;
+            }
+            p {
+                @include font (400, 16px, 145%);
+                color: $black;
+            }
+        }
+        &-background1 {
+            background-image: url(../img/benefit_icon1.webp);
+            background-position: left top;
+            background-repeat: no-repeat;
+        }
+        &-background2 {
+            background-image: url(../img/benefit_icon2.webp);
+            background-position: left top;
+            background-repeat: no-repeat;
+        }
+        &-background3 {
+            background-image: url(../img/benefit_icon3.webp);
+            background-position: left top;
+            background-repeat: no-repeat;
+        }
+        &-background4 {
+            background-image: url(../img/benefit_icon4.webp);
+            background-position: left top;
+            background-repeat: no-repeat;
+        }
+    }
+    &__slide {
+        background-image: url(../img/benefit_img.webp);
+        background-position: left;
+        background-repeat: no-repeat;
+        background-size: contain;
+        justify-content: flex-end;
+        background-color: $blue;
+        @media (max-width: $breackPoint_md) {
+            background-size: cover;
+        }
+        @media (max-width: $breackPoint_sm) {
+            background-image: url(../img/benefit_img-m.webp);
+            background-position: bottom;
+            background-size: contain;
+        }
+        &-content {
+            flex-direction: column;
+            width: 50%;
+            padding: $margin45;
+            @media (max-width: $breackPoint_sm) {
+                width: 100%;
+                padding: $margin15 5px $margin30 5px;
+                align-items: center;
+            }
+            h2 {
+                margin-bottom: $margin15;
+                @include font (600, 32px, 47px);
+                color: $white;
+                @media (max-width: $breackPoint_sm) {
+                    font-size: 24px;
+                }
+            }
+            p {
+                @include font (400, 16px, 145%);
+                color: $white;
+                @media (max-width: $breackPoint_sm) {
+                    @include font (400, 14px, 125%);
+                    text-align: center;
+                }
+            }
+            &-btn {
+                padding-top: $margin30;
+            }
+        }
+    }
+}
+

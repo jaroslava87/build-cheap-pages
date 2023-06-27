@@ -1,0 +1,199 @@
+@import 'null.scss';
+@import 'variables.scss';
+@import 'mixins.scss';
+@import 'fonts.scss';
+
+
+.header__container {
+    flex-direction: column-reverse;
+}
+.header {
+    background-color: #000;
+    background-image: linear-gradient(180deg,rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(../img/fon_header.webp);
+    background-position: right;
+    background-repeat: no-repeat;
+    @media (max-width: $breackPoint_sm) {
+    background-image: linear-gradient(180deg,rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(../img/fon_header-mobile.webp);
+    background-position: bottom;
+    }
+    &__logo {
+        @media (max-width: $breackPoint_md) {
+            max-width: 35%;
+        }
+        @media (max-width: $breackPoint_sm) {
+            max-width: 100%;
+            margin-bottom: $margin30;
+        }
+    }
+    &__top-container {
+       @include makeContainer();
+       align-items: center;
+       padding: $margin15 0;
+       @media (max-width: $breackPoint_sm) {
+            flex-direction: column;
+            align-items: center;
+       }
+    }
+        &__content {
+            align-items: center;
+            @media (max-width: $breackPoint_sm) {
+                flex-direction: column;
+            }
+            &-icon {
+                a {
+                    svg {
+                        path {
+                            @include hover-svg();
+                            @include focus-svg();
+                            @include active-svg();
+                            @include transition(fill);
+                            }
+                        }
+                    }
+                @media (max-width: $breackPoint_sm) {
+                    margin-bottom: $margin45;
+                }
+            }
+            &-btn {
+                @media (max-width: $breackPoint_sm) {
+                    margin-right: 0;
+                }
+            }
+           &-contact {
+            margin-right: $margin30;
+            flex-direction: column;
+            align-items: flex-end;
+            @media (max-width: $breackPoint_sm) {
+                margin-right: 0;
+                align-items: center;
+            }
+            &-tel {
+                margin-bottom: $margin15;
+                color: $white;
+                @include font(400, 23px, 145%);
+                @include hover();
+                @include focus();
+                @include active();
+                @include transition(color);
+                @media (max-width: $breackPoint_md) {
+                    font-size: 20px;
+                    margin-bottom: 1px;
+                }
+                @media (max-width: $breackPoint_sm) {
+                    margin-bottom: 7px;
+                }
+            }
+            &-address {
+                color: $white;
+                @include font(400, 14px, 145%); 
+                @include hover();
+                @include focus();
+                @include active();
+                @include transition(color);
+                @media (max-width: $breackPoint_md) {
+                    font-size: 12px;
+                }
+                @media (max-width: $breackPoint_sm) {
+                    margin-bottom: $margin15;
+                }
+            }
+           }
+           &-btn {
+            margin-right: $margin30;
+            @media (max-width: $breackPoint_md) {
+                font-size: $margin15;
+            }
+            @media (max-width: $breackPoint_sm) {
+                margin-bottom: $margin15;
+                margin-right: 0;
+            }
+        }
+        }
+}
+.header__nav {
+    background-color: $blue;
+    &-btn {
+        display: none;
+        @media (max-width: $breackPoint_sm) {
+            display: block;
+            padding: $margin15 $margin15 ;
+            margin: 0;
+            border: none;
+            background-color: transparent;
+            cursor: pointer;
+        }
+    }
+    &__bottom-container {
+        @include makeContainer();
+        align-items: center;
+        padding: $margin15 $margin45;
+        @media (max-width: $breackPoint_md) {
+            padding: $margin15 0;
+        }
+        @media (max-width: $breackPoint_sm) {
+            visibility: hidden;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top:  50vh;
+            width: 100%;
+            z-index: 3;
+            padding: $margin15;
+            background-color: $blue;
+            overflow-x: auto;
+            transform: translateX(-120%);
+            transition: visibility 0.3s ease-in-out, transform 0.3s ease-in-out;
+        }
+        ul {
+            justify-content: space-between;
+            align-items: center;
+            @media (max-width: $breackPoint_sm) {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: $margin15;
+            }
+        }
+        a {
+            color: $white;
+            @include font(400, 16px, 22px);
+            @include hover();
+            @include focus();
+            @include active();
+            @include transition(color);
+        }
+     }
+     &--active {
+        visibility: visible;
+        transform: none;
+    }
+}
+
+.stop-scroll {
+    overflow: hidden;
+  }
+
+.close__btn {
+    display: none;
+    @media (max-width: $breackPoint_sm) {
+        display: block;
+        cursor: pointer;
+        position: absolute;
+        right: $margin15;
+        top: $margin15;
+
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

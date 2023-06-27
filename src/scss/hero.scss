@@ -1,0 +1,267 @@
+@import 'null.scss';
+@import 'variables.scss';
+@import 'mixins.scss';
+@import 'fonts.scss';
+
+.hero__background1{
+    background-image: url(../img/111.webp);
+    background-position: right center;
+    background-repeat: no-repeat;
+    background-color: $blue;
+    background-size: contain;
+    @media (max-width: $breackPoint_xl) {
+        background-image: url(../img/hero_img11.webp); 
+        background-size: auto;
+    }
+    @media (max-width: $breackPoint_md) {
+        background-position: bottom right;
+        background-size: 60%;
+    }
+    @media (max-width: $breackPoint_sm) {
+        background-image: url(../img/m11.webp); 
+        background-position: bottom;
+        background-size: contain;
+    }
+
+}
+
+.hero__background2{
+    background-image: url(../img/222.webp);
+    background-position: right;
+    background-repeat: no-repeat;
+    background-color: $blue;
+    background-size: contain;
+    @media (max-width: $breackPoint_xl) {
+        background-image: url(../img/hero_img222.webp); 
+        background-size: auto;
+    }
+    @media (max-width: $breackPoint_md) {
+
+        background-position: bottom right;
+        background-size: 50%;
+    }
+    @media (max-width: $breackPoint_sm) {
+        background-image: url(../img/m22.webp); 
+        background-position: bottom;
+        background-size: contain;
+    }
+}
+
+.hero__container1 {
+    width: 50%;
+    padding: $margin30 0 $margin45 $margin60 ;
+    flex-direction: column;
+    @media (max-width: $breackPoint_md) {
+        width: 100%;
+        padding: 30px 45px 30px 45px;
+    }
+    @media (max-width: $breackPoint_sm) {
+        width: 86%;
+        padding: $margin15;
+        align-items: center;
+    }
+    &-text {
+        margin-bottom: $margin30;
+        @include font(400, 21px, 145%);
+        color: $green;
+        @media (max-width: $breackPoint_sm) {
+            @include font(400, 12px, 125%);
+            margin-bottom: $margin15;
+            text-align: center;        }
+    }
+    &-title {
+        margin-bottom: $margin15;
+        @include font(600, 39px, 145%);
+        color: $white;
+        @media (max-width: $breackPoint_sm) {
+            @include font(400, 27px, 125%);
+            text-align: center;
+        }
+    }
+    &-descr {
+        @include font(400, 15px, 145%);
+        color: $white;
+        @media (max-width: $breackPoint_sm) {
+            @include font(400, 10px, 125%);
+            text-align: center;
+
+        }
+    }
+    &-cart {
+        padding-top: $margin30;
+        align-items: center;
+        @media (max-width: $breackPoint_md) {
+            flex-direction: column;
+            align-items: flex-start ;
+        }
+        @media (max-width: $breackPoint_sm) {
+            flex-direction: column-reverse;
+            align-items: center;
+            padding-top: $margin15; 
+        }
+        &-btn {
+                margin-right: 70px;
+                @media (max-width: $breackPoint_md) {
+                    margin-bottom: $margin15;
+                }
+                @media (max-width: $breackPoint_sm) {
+                    margin-right: 0;
+                    padding-top: $margin15;
+                    margin-bottom: 50px;
+                }
+        }
+        &-content {
+            flex-direction: column;
+            @media (max-width: $breackPoint_sm) {
+                flex-direction: row;
+                gap: 8px;
+             }
+            &-text {
+                align-items: center;
+                gap: 3px;
+                svg {
+                    margin-right: 7px;
+                    @media (max-width: $breackPoint_sm) {
+                        width: 17px;
+                        margin-right: 2px;
+                     }
+                }
+                p {
+                    @include font(400, 20px, 145%);
+                    color: $white;
+                    @media (max-width: $breackPoint_sm) {
+                        @include font(400, 13px, 145%)
+                     }
+                }
+            }
+        }
+    }
+    
+}
+
+.hero__container2 {
+    width: 50%;
+    padding: $margin30 0 $margin45 $margin60 ; 
+    flex-direction: column;
+    @media (max-width: $breackPoint_md) {
+        width: 100%;
+        padding: 30px 45px 30px 45px
+    }
+    @media (max-width: $breackPoint_sm) {
+        width: 86%;
+        padding: 15px;
+        align-items: center;
+    }
+    &-title {
+        margin-bottom: $margin15;
+        @include font(600, 39px, 145%);
+        color: $white;
+        @media (max-width: $breackPoint_sm) {
+            @include font(400, 27px, 125%);
+            text-align: center;
+        }
+    }
+    &-descr {
+        @include font(400, 15px, 145%);
+        color: $white;
+        @media (max-width: $breackPoint_sm) {
+            @include font(400, 10px, 125%);
+            text-align: center;
+        }
+    }
+    &-cart {
+        flex-direction: column;
+        padding-top: $margin30; 
+        @media (max-width: $breackPoint_md) {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        @media (max-width: $breackPoint_sm) {
+            padding-top: $margin15; 
+            align-items: center;
+        }
+        &-btn {
+            padding-top: $margin30;
+            @media (max-width: $breackPoint_md) {
+                margin-bottom: $margin15;
+            }
+            @media (max-width: $breackPoint_sm) {
+                margin-bottom: 58px;
+            }
+        }
+        &-content {
+            gap: $margin30;
+            @media (max-width: $breackPoint_md) {
+                flex-direction: column;
+                gap: $margin15;
+            }
+            @media (max-width: $breackPoint_sm) {
+                gap: 3px; 
+            }
+            &-text {
+                align-items: center;
+                gap: 5px;
+                svg {
+                    margin-right: 7px;
+                    @media (max-width: $breackPoint_sm) {
+                        width: 17px;
+                        margin-right: 2px;
+                     }
+                }
+                p {
+                    @include font(400, 20px, 145%);
+                    color: $white;
+                    @media (max-width: $breackPoint_sm) {
+                        @include font(400, 13px, 145%)
+                     }
+                }
+            }
+        }
+    }
+}
+
+.swiper-button-next, .swiper-button-prev {
+    color: $white;
+}
+
+
+
+// hero__search
+.hero__search {
+    padding: $margin15 0;
+    &-input {
+        width: 100%;
+        border: 2px solid $gray;
+        border-right: none;
+        padding-left: $margin15;
+        @include font (400, 18px, 145%);
+        @include transition (border-color);
+        &:hover {
+            border-color: rgb(255, 198, 174);
+        }
+        &:focus-visible {
+            border-color: rgb(176, 87, 49);
+            background-color: $gray;
+            outline: none;
+        }
+        @media (max-width: $breackPoint_sm) {
+            border: 1px solid $gray;
+        }
+    }
+    &-btn {
+        border-radius: 0;
+        @media (max-width: $breackPoint_sm) {
+            padding: 5px 25px;
+    }
+}
+}
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,155 @@
+@import 'null.scss';
+@import 'variables.scss';
+@import 'mixins.scss';
+@import 'fonts.scss';
+
+.footer-background {
+    background-color: #000;
+}
+
+.footer {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: $margin30 0;
+    grid-template-areas: 
+    "logo logo nav cont"
+    "descr descr nav cont";
+    @media (max-width: $breackPoint_md) {
+        grid-template-areas: 
+        "logo logo nav nav"
+        "cont cont nav nav"
+        "cont cont descr descr";
+    }
+    @media (max-width: $breackPoint_sm) {
+        grid-template-areas: 
+        "logo"
+        "nav"
+        "cont"
+        "descr";
+    }
+    &__logo {
+        grid-area: logo;
+    }
+    &__descr {
+        grid-area: descr;
+        padding-top: $margin30;
+        flex-direction: column;
+        @media (max-width: $breackPoint_md) {
+           align-items: flex-end; 
+           padding-top: 0;
+        }
+         @media (max-width: $breackPoint_sm) {
+            align-items: flex-start;
+         }
+        &-top {
+            margin-bottom: 5px;
+            @include font (400, 13px, 15px);
+            color: rgba(255, 255, 255, 0.4);
+            @media (max-width: $breackPoint_sm) {
+                font-size: 10px;
+            }
+        }
+        &-bottom {
+            @include font (400, 13px, 15px);
+            color: rgba(255, 255, 255, 0.4);
+            @media (max-width: $breackPoint_sm) {
+                font-size: 10px;
+            }
+        }
+    }
+    &__nav {
+        grid-area: nav;
+        @media (max-width: $breackPoint_sm) {
+            padding-top: $margin30;
+        }
+        nav {
+            ul {
+                flex-direction: column;
+                gap: 5px;
+                @media (max-width: $breackPoint_md) {
+                    align-items: flex-end;
+                    gap: $margin15;
+                }
+                @media (max-width: $breackPoint_sm) {
+                    align-items: center;
+                }
+                li {
+                    a{
+                        @include font (400, 16px, 22px); 
+                        color: $white; 
+                        @include hover();
+                        @include focus();
+                        @include active();
+                        @include transition(color);
+                        @media (max-width: $breackPoint_md) {
+                            font-size: 18px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &__contact {
+        grid-area: cont;
+        flex-direction: column;
+        @media (max-width: $breackPoint_md) {
+            padding-top: $margin30;
+        }
+        &-content {
+            align-items: center;
+            svg {
+                margin-right: 5px;
+                path {
+                    @include hover-svg();
+                    @include focus-svg();
+                    @include active-svg();
+                    @include transition(stroke);
+                }
+                circle {
+                    @include hover-svg();
+                    @include focus-svg();
+                    @include active-svg();
+                    @include transition(stroke);
+                }
+                ellipse {
+                    @include hover-svg();
+                    @include focus-svg();
+                    @include active-svg();
+                    @include transition(stroke);
+                }
+            } 
+            a {
+                @include font (400, 16px, 140%); 
+                color: #b4b4b4; 
+                @include hover();
+                @include focus();
+                @include active();
+                @include transition(color);
+            }
+            &:not(:last-child) {
+                margin-bottom: 5px;
+            }
+    }
+}
+}
+
+.footer__contact-btn  {
+    padding-top: $margin30;
+    gap: 10px;
+    align-items: center;
+    a {
+        svg {
+            path {
+                @include hover-svg();
+                @include focus-svg();
+                @include active-svg();
+                @include transition(fill);
+                }
+            }
+        }
+    @media (max-width: $breackPoint_sm) {
+        justify-content: center;
+        padding-top: $margin15;
+        padding-bottom: $margin30;
+            }
+}

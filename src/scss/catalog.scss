@@ -1,0 +1,133 @@
+@import 'null.scss';
+@import 'variables.scss';
+@import 'mixins.scss';
+@import 'fonts.scss';
+
+.catalog {
+    grid-template-columns: repeat(5, 1fr);
+    gap: $margin30;
+    @media (max-width: $breackPoint_xl) {
+        grid-template-columns: repeat(4, 1fr); 
+    }
+    @media (max-width: $breackPoint_md) {
+        grid-template-columns: repeat(3, 1fr);
+        gap: $margin15; 
+    }
+    @media (max-width: $breackPoint_sm) {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+    &__btn {
+        padding-top: $margin30;
+        @media (max-width: $breackPoint_md) {
+            padding-top: $margin15;  
+        }
+        button {
+            width: 100%;
+        }
+       }
+    &__title {
+        padding-bottom: $margin30;
+        padding-left: $margin15;
+        @media (max-width: $breackPoint_md) {
+            padding-bottom: $margin15; 
+        }
+    }
+    &__cart{
+        &-content {
+        padding: 160px 0 8px 0;
+        width: 100%;
+        background-color: $beuge;
+        position: relative;
+        z-index: -10;
+        align-items: center;
+        justify-content: center;
+        @media (max-width: $breackPoint_xll) {
+            padding-top: 140px;
+        }
+        @media (max-width: $breackPoint_xl) {
+            padding-top: 170px;
+        }
+        @media (max-width: $breackPoint_md) {
+            padding-top: 175px; 
+        }
+        @media (max-width: $breackPoint_sm) {
+            padding-top: 110px;
+        }
+        a {
+            @include font(400, 16px, 145%);
+            text-align: center;
+            color: $black;
+            @include hover();
+            @include focus();
+            @include active();
+            @include transition(color);
+            @media (max-width: $breackPoint_xll) {
+                font-size: 13px;
+            }
+            @media (max-width: $breackPoint_xll) {
+                font-size: 11px;
+            }
+        }
+    }
+    }
+    &__background1 {
+        background-image: url(../img/catalog_img1.webp);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: top;
+    }
+    &__background2 {
+        background-image: url(../img/catalog_img2.webp);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: top;
+    }
+    &__background3 {
+        background-image: url(../img/catalog_img3.webp);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: top;
+    }
+    &__background4 {
+        background-image: url(../img/catalog_img4.webp);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: top;
+    }
+    &__background5 {
+        background-image: url(../img/catalog_img5.webp);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: top;
+    }
+    &__background6 {
+        background-image: url(../img/catalog_img6.webp);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: top;
+    }
+    &__background7 {
+        background-image: url(../img/catalog_img7.webp);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: top;
+    }
+    &__background8 {
+        background-image: url(../img/catalog_img8.webp);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: top;
+    }
+    &__background9 {
+        background-image: url(../img/catalog_img9.webp);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: top;
+    }
+    &__background10 {
+        background-image: url(../img/catalog_img10.webp);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: top;
+    }
+}

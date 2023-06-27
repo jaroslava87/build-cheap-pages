@@ -1,0 +1,121 @@
+@import 'variables.scss';
+@import 'mixins.scss';
+
+html {
+	box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: $white;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+.list-reset {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .butten-reset {
+    margin: 0;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+
+  svg {
+    cursor: pointer;
+  }
+
+   ul, li, a {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+   }
+
+  .btn {
+    display: inline-block;
+    padding: $margin15 40px;
+    background-color: $gray;
+    border-radius: 5px;
+    color: $black;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    @include transition (scale);
+    &:focus-visible {
+      background-color: rgb(255, 77, 0);
+      color: $white;
+      outline: none;
+    }
+    &:active {
+          color: rgb(176, 87, 49);
+    }
+    &:hover {
+      background-color: rgb(255, 198, 174);
+      scale: 1.1;
+    }
+    @media (max-width: $breackPoint_sm) {
+      padding: 10px 30px;
+      font-size: 10px;
+    }
+  }
+
+  h1, h2, h3, ul, p {
+    margin: 0;
+  }
+
+  img {
+    display: inline-block;
+    height: auto;
+    max-width: 100%;
+  }
+
+  .flex {
+    display: flex;
+  }
+
+  .grid {
+    display: grid;
+  }
+
+  .container {
+    margin: 0 auto;
+    padding: 0 $margin15;
+  }
+
+  .hidden {
+    visibility: hidden;
+  }
+
+  section {
+    @include makeContainer();
+    margin-bottom: $margin30;
+    @media (max-width: $breackPoint_md) {
+      padding: 0 5px;
+    }
+    @media (max-width: $breackPoint_sm) {
+      margin-bottom: 22px; 
+    }
+    
+  }
+
+  .title {
+    @include font(600, 29px, 145%);
+    color: $black; 
+    @media (max-width: $breackPoint_md) {
+      font-size: 23px;
+    }
+    @media (max-width: $breackPoint_sm) {
+      font-size: 20px;
+    }
+  }
+
+  

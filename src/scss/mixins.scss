@@ -1,0 +1,56 @@
+@mixin makeContainer {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+@mixin font($weight, $size, $line) {
+    font-weight: $weight;
+    font-size: $size;
+    line-height: $line;
+}
+
+@mixin hover {
+    &:hover {
+        color: rgb(255, 198, 174) ;
+    }
+}
+
+@mixin focus {
+    &:focus-visible {
+        color: rgb(255, 77, 0);
+        outline: none;
+    }
+}
+
+@mixin active {
+    &:active {
+        color: rgb(176, 87, 49);
+    }
+}
+
+@mixin hover-svg {
+    &:hover {
+        fill: rgb(255, 198, 174) ;
+    }
+}
+
+@mixin focus-svg {
+    &:focus-visible {
+        fill: rgb(255, 77, 0);
+        outline: none;
+    }
+}
+
+@mixin active-svg {
+    &:active {
+        fill: rgb(176, 87, 49);
+    }
+}
+@mixin transition($property) {
+    transition-property: $property;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+}
+
+
+
