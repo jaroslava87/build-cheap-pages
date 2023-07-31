@@ -23,4 +23,4 @@
 (Responsive layout layout 1920 - 320 px. Project build: WEBPACK. Layout built on GRID, FLEX-BOX. HTML5, CSS3, Java Script, 
 BEM methodology, Image and Font Optimization. The SWIPPER library is used) 
 
-<img src="https://github.com/jaroslava87/build-cheap-pages/blob/master/src/img/build-cheap-preview.jpg" width="300px">
+<img src="https://github.com/jaroslava87/previews/blob/main/build-cheap-preview.jpg" width="300px">
